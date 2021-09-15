@@ -1,29 +1,27 @@
 # The geometry I want to use will consider this board:
-# |-|-|-|-| |-|-|
-# |-|-|-|-|-|-|-|
-# |-|-|-|-|-|-|-|
-# |-|-|-|-| |-|-|
+# |-|-|-|-|   |-|-|
+# |-|-|-|-|-|-|-|-|
+# |-|-|-|-|-|-|-|-|
+# |-|-|-|-|   |-|-|
 
 # Where the bottom left point is the origin of a cartesian plane.
 # this function will generate a board (set of edges) as a data frame
 
 #' @export
 #' @example
-#' edges() %>%
-#'   ggplot(
-#'     aes(
-#'       x = x1,
-#'       xend = x2,
-#'       y = y1,
-#'       yend = y2
-#'     )
-#'   ) +
-#'   geom_segment() +
-#'   coord_fixed()
+# make_edges() %>%
+#   ggplot(
+#     aes(
+#       x = x1,
+#       xend = x2,
+#       y = y1,
+#       yend = y2
+#     )
+#   ) +
+#   geom_segment() +
+#   coord_fixed()
 
-edges = function(
-  color = 'black'
-){
+make_edges = function(){
 
   # Points where the edges reside in:
   h_range = 0:7

@@ -1,17 +1,18 @@
 #' @export
-#' @example basic_plot() + geom_segment(data = edges())
-
+#' @example
+# basic_plot() +
+#   geom_segment(
+#     data = make_edges(),
+#     aes(
+#       xend = x2,
+#       yend = y2
+#     )
+#   )
 
 basic_plot = function(){
 
   ggplot(
-    data = NULL,
-    aes(
-      x = x1,
-      xend = x2,
-      y = y1,
-      yend = y2
-    )
+    data = NULL
   ) +
     coord_fixed() +
     theme_classic() +
